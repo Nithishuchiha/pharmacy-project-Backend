@@ -5,21 +5,21 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.pharmacine.model.BillModel;
-import com.project.pharmacine.repository.BillRepo;
+import com.project.pharmacine.model.ProductModel;
+import com.project.pharmacine.repository.ProductRepo;
 
 @Service
-public class BillService 
+public class ProductService 
 {
     @Autowired
-    private BillRepo pharmaRepo;
-    public BillService(BillRepo pharmaRepo)
+    private ProductRepo pharmaRepo;
+    public ProductService(ProductRepo pharmaRepo)
     {
         this.pharmaRepo=pharmaRepo;
     }
 
 
-    public BillModel savePharma(BillModel pharmaModel)
+    public ProductModel savePharma(ProductModel pharmaModel)
     {
         pharmaRepo.save(pharmaModel);
         return pharmaModel;
@@ -27,14 +27,14 @@ public class BillService
 
 
     
-    public List<BillModel> getPharma()
+    public List<ProductModel> getPharma()
     {
         return pharmaRepo.findAll();
     }
 
 
 
-    public Optional<BillModel> searchId(int id)
+    public Optional<ProductModel> searchId(int id)
     {
         return pharmaRepo.findById(id);
     }

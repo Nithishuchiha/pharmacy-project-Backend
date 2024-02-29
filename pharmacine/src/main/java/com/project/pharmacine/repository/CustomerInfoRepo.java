@@ -3,9 +3,9 @@ package com.project.pharmacine.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.project.pharmacine.model.SignUpModel;
+import com.project.pharmacine.model.CustomerInfo;
 
 @Repository
-public interface AppRepo extends JpaRepository<SignUpModel,Integer>{
+public interface CustomerInfoRepo extends JpaRepository<CustomerInfo,Integer>{
     
 }

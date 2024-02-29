@@ -6,12 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.project.pharmacine.model.SignUpModel;
-import com.project.pharmacine.repository.AppRepo;
+import com.project.pharmacine.repository.SignUpRepo;
 @Service
-public class AppService {
+public class SignUpService {
 
     @Autowired
-    AppRepo appRepo;
+    SignUpRepo appRepo;
 
 
     public SignUpModel signUpPost(SignUpModel entity)
@@ -23,6 +23,7 @@ public class AppService {
     
     public List<SignUpModel> signInGet()
     {
+        
         return appRepo.findAll();
         
     }
